@@ -4,7 +4,7 @@ const MovieCard = () => {
   const [featured, setFeatured] = useState([])
   const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&`
   const IMAGES_API = `https://image.tmdb.org/t/p/w1280`
-  const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&`
+  // const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&`
   const API_KEY = `api_key=3997d18b9ba6f2c5d2b91c4d53d096f0`
   useEffect(() => {
     fetch(FEATURED_API + API_KEY)
@@ -33,9 +33,10 @@ const MovieCard = () => {
                   background: '#17223B',
                   padding: '3px 20px',
                   borderRadius: '7px',
+                  fontWeight: '700',
                 }}
               >
-                8.6
+                {item.vote_average}
               </span>
             </div>
           </Col>
