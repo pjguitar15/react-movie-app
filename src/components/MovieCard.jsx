@@ -17,7 +17,7 @@ const MovieCard = () => {
     <Container>
       <Row>
         {featured.map((item, index) => (
-          <Col key={index} xl='3' className='my-4'>
+          <Col key={index} xl='3' lg='3' md='4' sm='6' className='my-4'>
             <div className='parentDiv'>
               <img
                 className='posterimg'
