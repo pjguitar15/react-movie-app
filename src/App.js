@@ -1,5 +1,6 @@
 import React from 'react'
 import MovieCard from './components/MovieCard.jsx'
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return (

@@ -18,14 +18,25 @@ const MovieCard = () => {
       <Row>
         {featured.map((item, index) => (
           <Col key={index} xl='3' className='my-4'>
-            <img
-              style={{ width: '100%' }}
-              src={IMAGES_API + item.poster_path}
-              alt='movieposter'
-            />
+            <div
+              className='parentDiv'
+              style={{ position: 'relative', overflow: 'hidden' }}
+            >
+              <img
+                className='posterimg'
+                style={{ width: '100%' }}
+                src={IMAGES_API + item.poster_path}
+                alt='movieposter'
+              />
+              <div id='overview' className='overview'>
+                <h4>Overview</h4>
+                <p>{item.overview}</p>
+              </div>
+            </div>
+
             <div
               style={{ background: '#263859' }}
-              className='d-flex justify-content-between align-items-center text-light py-3 px-3'
+              className='d-flex  justify-content-between align-items-center text-light py-3 px-3'
             >
               <h6>{item.title}</h6>{' '}
               <span
