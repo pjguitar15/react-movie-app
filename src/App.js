@@ -4,7 +4,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return (
-    <div>
+    <div className='App'>
       <h1 className='text-center text-light'>Movies</h1>
       <MovieCard />
     </div>

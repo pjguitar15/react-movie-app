@@ -18,13 +18,9 @@ const MovieCard = () => {
       <Row>
         {featured.map((item, index) => (
           <Col key={index} xl='3' className='my-4'>
-            <div
-              className='parentDiv'
-              style={{ position: 'relative', overflow: 'hidden' }}
-            >
+            <div className='parentDiv'>
               <img
                 className='posterimg'
-                style={{ width: '100%' }}
                 src={IMAGES_API + item.poster_path}
                 alt='movieposter'
               />
@@ -34,21 +30,9 @@ const MovieCard = () => {
               </div>
             </div>
 
-            <div
-              style={{ background: '#263859' }}
-              className='d-flex  justify-content-between align-items-center text-light py-3 px-3'
-            >
-              <h6>{item.title}</h6>{' '}
-              <span
-                style={{
-                  background: '#17223B',
-                  padding: '3px 20px',
-                  borderRadius: '7px',
-                  fontWeight: '700',
-                }}
-              >
-                {item.vote_average}
-              </span>
+            <div className='movie-footer py-3 px-3'>
+              <h6>{item.title}</h6>
+              <span className='rating'>{item.vote_average}</span>
             </div>
           </Col>
         ))}
