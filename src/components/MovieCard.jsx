@@ -1,18 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Col, Row, Container } from 'react-bootstrap'
-const MovieCard = () => {
-  const [featured, setFeatured] = useState([])
-  const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&`
-  const IMAGES_API = `https://image.tmdb.org/t/p/w1280`
-  // const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&`
-  const API_KEY = `api_key=3997d18b9ba6f2c5d2b91c4d53d096f0`
-  useEffect(() => {
-    fetch(FEATURED_API + API_KEY)
-      .then((res) => res.json())
-      .then((data) => setFeatured(data.results))
-
-    console.log(featured.title)
-  }, [])
+const MovieCard = ({ featured, IMAGES_API }) => {
   return (
     <Container>
       <Row>
