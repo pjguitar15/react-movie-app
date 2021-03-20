@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className='App'>
       <NavbarComponent submitHandler={submitHandler} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <h1 className='text-center text-light mt-5'>Movies</h1>
+      <h1 className='text-center text-light mt-5'>Moviess YOW</h1>
       <MovieCard IMAGES_API={IMAGES_API} featured={featured} setFeatured={setFeatured} submitHandler={submitHandler} />
     </div>
   )
